@@ -1,0 +1,26 @@
+
+    <div class="card m-5" *ngFor="let questionnaire of questionnaires">
+        <h2 class="card-header bg-light">
+            {{questionnaire.title}}
+        </h2>
+        <div class="card-body">
+            <p class="card-text">
+                {{questionnaire.body}}
+            </p>
+
+        </div>
+        <div class="card-footer">
+            <form [formGroup]="questionnaireReplieAddForm" class="example-form">
+                <div class="mb-3 row">
+                    <label for="inputAnswer" class="col-sm-2 col-form-label">Cevap</label>
+                    <div class="col-sm-6 col-md-8 col-lg-10">
+                      <input formControlName="answer" cols="1" class="form-control" id="inputAnswer{{questionnaire.title}}">
+
+                    </div>
+                        <div class="mt-4 col-sm-4 col-md-6 col-lg-8">
+                            <button class="btn btn-outline-dark" (click)="reply(questionnaire.id)">Gönder</button>
+                        </div>
+                  </div>
+            </form>
+        </div>
+      </div>

@@ -1,0 +1,65 @@
+
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Anket ekle</button>
+    <button type="button" routerLink="/questionnaireReply/list" class="btn btn-outline-primary" >Anketelere verilen cevap</button>
+  
+  </div>
+
+
+
+<!-- 
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Yeni Anket</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mt-3 mb-3">
+           
+    <form [formGroup]="questionnaireAddForm">
+
+        <div class="p-4">
+            <h1 class="text-center mt-0 mb-2">Yeni Anket</h1>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Başlık</label>
+                <input type="text" class="form-control" formControlName="title" id="formGroupExampleInput" placeholder="Başlık">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">İçerik</label>
+                <input type="text" class="form-control" formControlName="body" id="formGroupExampleInput2" placeholder="İçerik">
+              </div>
+        </div>
+
+    </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="add()" mat-raised-button color="primary" data-bs-dismiss="modal">Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="mt-5">
+      <div class="card text-center mat-elevation-z5 w-100 mb-5 mt-5" *ngFor="let question of questions">
+          <div class="card-body">
+              <div class="card-title fs-4 mb-4 mt-2">
+                  {{question.title}}
+              </div>
+              <p class="card-text mb-1 mt-3">
+                  {{question.body}}
+              </p>
+          </div>
+      </div>
+  </div>
+  </div>

@@ -1,0 +1,39 @@
+
+
+
+    <form autocomplete="off" [formGroup]="registerForm">
+
+        <div class="mt-5 mat-elevation-z4 p-5">
+
+            <h1 class="text-center mt-2 mb-2">Kayıt Ol</h1>
+
+            
+
+            <div class="form-floating mb-3 mt-3">
+                <input type="text" class="form-control" formControlName="firstName" id="floatingInputF" placeholder="İsim">
+                <label for="floatingInputF">İsim</label>
+            </div>
+
+            <div class="form-floating mb-3 mt-3">
+                <input type="text" class="form-control"  formControlName="lastName" id="floatingInputL" placeholder="Soyisim">
+                <label for="floatingInputL">Soyisim</label>
+            </div>
+
+            <div class="form-floating mb-3 mt-3">
+                <input type="email" class="form-control"   formControlName="email" id="floatingInputE" placeholder="name@example.com">
+                <label for="floatingInputE">Email</label>
+            </div>
+
+            <div class="form-floating mt-3">
+                <input type="password" autocomplete="off"  formControlName="password" class="form-control" id="floatingPassword" placeholder="Şifre">
+                <label for="floatingPassword">Şifre</label>
+            </div>
+
+            <div class="col-md-12 col-lg-12 col-sm-12 mt-5">
+                <div class="d-grid gap-2">
+                    <button (click)="register()" mat-raised-button color="accent" type="button">Kayıt ol</button>
+                </div>
+            </div>
+        </div>
+
+    </form>

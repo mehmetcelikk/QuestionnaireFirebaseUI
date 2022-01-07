@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "questionnaire-8f372": {
+      "hosting": {
+        "QuestionnaireFirebaseUI": [
+          "questionnaire-8f372"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "questionnaire-8f372"
+  }
+}

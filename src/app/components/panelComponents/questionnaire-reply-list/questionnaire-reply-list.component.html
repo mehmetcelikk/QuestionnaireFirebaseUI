@@ -1,0 +1,38 @@
+<!-- questionnaireReplies-->
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Anket Id</th>
+            <th>Kullanıcı Id</th>
+            <th>Kullanıcı Email</th>
+            <th>Cevap</th>
+            <th>Cevap tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let questionnaireReplie of questionnaireReplies">
+            <td>
+                {{questionnaireReplie.id}}
+            </td>
+            <td>
+                {{questionnaireReplie.questionnaireId}}
+            </td>
+            <td>
+                {{questionnaireReplie.userId}}
+            </td>
+            <td>
+                {{questionnaireReplie.userEmail}}
+            </td>
+            <td>
+                {{questionnaireReplie.answer}}
+            </td>
+            <td>
+                
+                {{questionnaireReplie.createDate}}
+            </td>
+        </tr>
+    </tbody>
+</table>
